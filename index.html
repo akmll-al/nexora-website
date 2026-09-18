@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Technology & Cybersecurity</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #070b14;
+            color: white;
+            line-height: 1.7;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            height: 75px;
+            padding: 0 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #0d1322;
+            border-bottom: 1px solid #202b40;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #00d9ff;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #d8deeb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d9ff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            padding: 100px 10%;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at 80% 30%, #06384c, transparent 30%),
+                radial-gradient(circle at 20% 70%, #18254b, transparent 35%),
+                #070b14;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 17px;
+
+            border: 1px solid #00d9ff;
+            border-radius: 30px;
+
+            color: #00d9ff;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #00d9ff;
+        }
+
+        .hero p {
+            max-width: 750px;
+            color: #a7b1c5;
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #00d9ff;
+            color: #061018;
+        }
+
+        .primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px #00d9ff44;
+        }
+
+        .secondary {
+            border: 1px solid #35425b;
+            color: white;
+        }
+
+        .secondary:hover {
+            border-color: #00d9ff;
+            color: #00d9ff;
+        }
+
+        /* ================= STATISTIC ================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            background: #0d1322;
+
+            border-top: 1px solid #202b40;
+            border-bottom: 1px solid #202b40;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat h2 {
+            color: #00d9ff;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #8994aa;
+        }
+
+        /* ================= SECTION ================= */
+
+        .section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #8994aa;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #9ba5b8;
+            margin-bottom: 20px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #0d1526;
+
+            border: 1px solid #202d45;
+            border-radius: 15px;
+
+            padding: 35px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00d9ff;
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #919bb0;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            color: #00d9ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ================= WHY ================= */
+
+        .why {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .why-box {
+            background: #0d1526;
+            border: 1px solid #202d45;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .why-box h3 {
+            color: #00d9ff;
+            margin-bottom: 12px;
+        }
+
+        .why-box p {
+            color: #929db2;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 45px 10%;
+            text-align: center;
+
+            background: #0d1322;
+            border-top: 1px solid #202b40;
+        }
+
+        footer p {
+            color: #747f96;
+            margin-top: 8px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .stats,
+            .cards,
+            .why {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">NEXORA</div>
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="cybersecurity.html">Cybersecurity</a>
+            </li>
+
+            <li>
+                <a href="technology.html">Technology</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                TECHNOLOGY • SECURITY • INNOVATION
+            </div>
+
+            <h1>
+                Explore The
+                <span>Digital Future.</span>
+            </h1>
+
+            <p>
+                Selamat datang di NEXORA. Website informatif yang membahas
+                perkembangan teknologi modern serta pentingnya cybersecurity
+                dalam kehidupan digital.
+            </p>
+
+            <div class="buttons">
+
+                <a href="cybersecurity.html" class="btn primary">
+                    Explore Cybersecurity
+                </a>
+
+                <a href="technology.html" class="btn secondary">
+                    Explore Technology
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+        <div class="stat">
+            <h2>01</h2>
+            <p>Cybersecurity</p>
+        </div>
+
+        <div class="stat">
+            <h2>02</h2>
+            <p>Modern Technology</p>
+        </div>
+
+        <div class="stat">
+            <h2>∞</h2>
+            <p>Future Innovation</p>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <div class="section-title">
+            <h2>Tentang NEXORA</h2>
+            <p>Mengenal tujuan dari website ini</p>
+        </div>
+
+        <div class="about">
+
+            <p>
+                NEXORA merupakan website yang dibuat untuk memberikan
+                informasi dasar mengenai perkembangan teknologi dan
+                cybersecurity.
+            </p>
+
+            <p>
+                Teknologi telah menjadi bagian penting dalam kehidupan
+                manusia. Kita menggunakan teknologi untuk berkomunikasi,
+                belajar, bekerja, berbelanja, hingga menyimpan informasi.
+            </p>
+
+            <p>
+                Namun, semakin banyak aktivitas dilakukan secara digital,
+                semakin besar pula kebutuhan terhadap keamanan. Oleh karena
+                itu, pemahaman mengenai teknologi dan cybersecurity menjadi
+                hal yang penting di era digital.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOPIC -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Explore Our Topics</h2>
+
+            <p>
+                Pelajari dua bidang utama yang dibahas NEXORA
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🛡️</div>
+
+                <h3>Cybersecurity</h3>
+
+                <p>
+                    Cybersecurity adalah bidang yang berfokus pada
+                    perlindungan sistem komputer, jaringan, aplikasi,
+                    dan data dari ancaman digital.
+                </p>
+
+                <a href="cybersecurity.html">
+                    Pelajari Cybersecurity →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚡</div>
+
+                <h3>Modern Technology</h3>
+
+                <p>
+                    Teknologi modern mencakup berbagai inovasi seperti
+                    Artificial Intelligence, Cloud Computing, Internet
+                    of Things, dan Robotics.
+                </p>
+
+                <a href="technology.html">
+                    Pelajari Technology →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Why It Matters?</h2>
+
+            <p>
+                Mengapa kita perlu memahami teknologi digital?
+            </p>
+
+        </div>
+
+
+        <div class="why">
+
+            <div class="why-box">
+
+                <h3>Produktivitas</h3>
+
+                <p>
+                    Teknologi membantu manusia menyelesaikan pekerjaan
+                    dengan lebih cepat dan efisien.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <h3>Keamanan</h3>
+
+                <p>
+                    Pemahaman cybersecurity membantu pengguna mengenali
+                    dan menghindari berbagai ancaman digital.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <h3>Masa Depan</h3>
+
+                <p>
+                    Perkembangan teknologi menciptakan berbagai peluang
+                    baru dalam pendidikan, bisnis, dan pekerjaan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">NEXORA</div>
+
+        <p>
+            Technology & Cybersecurity Information Website
+        </p>
+
+        <p>
+            © 2026 NEXORA | Informatics Project
+        </p>
+
+    </footer>
+
+</body>
+</html>

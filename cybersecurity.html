@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Cybersecurity</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #070b14;
+            color: white;
+            line-height: 1.7;
+        }
+
+        nav {
+            height: 75px;
+            padding: 0 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #0d1322;
+            border-bottom: 1px solid #202b40;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #00ff88;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #d8deeb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 10%;
+
+            background:
+                radial-gradient(circle at 80% 30%, #063d2c, transparent 30%),
+                #070b14;
+        }
+
+        .label {
+            color: #00ff88;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00ff88;
+        }
+
+        .hero p {
+            max-width: 800px;
+            color: #9da8bb;
+            font-size: 18px;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #8b96aa;
+        }
+
+        /* DEFINITION */
+
+        .definition {
+            background: #0d1526;
+
+            border-left: 4px solid #00ff88;
+
+            padding: 30px;
+
+            border-radius: 10px;
+        }
+
+        .definition p {
+            color: #9ca7b9;
+        }
+
+        /* CIA */
+
+        .cia {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cia-card {
+            background: #0d1526;
+            border: 1px solid #203247;
+
+            padding: 30px;
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .cia-card:hover {
+            transform: translateY(-7px);
+            border-color: #00ff88;
+        }
+
+        .cia-card h3 {
+            color: #00ff88;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .cia-card p {
+            color: #919caf;
+        }
+
+        /* THREATS */
+
+        .threats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .threat {
+            background: #0d1526;
+            border: 1px solid #202d45;
+
+            padding: 30px;
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .threat:hover {
+            transform: translateY(-6px);
+            border-color: #00ff88;
+        }
+
+        .threat h3 {
+            margin-bottom: 12px;
+            font-size: 23px;
+        }
+
+        .threat p {
+            color: #919caf;
+        }
+
+        /* SECURITY TIPS */
+
+        .tips {
+            background: linear-gradient(
+                135deg,
+                #0d211a,
+                #0d1526
+            );
+
+            border: 1px solid #1d4936;
+
+            border-radius: 15px;
+
+            padding: 35px;
+        }
+
+        .tips ul {
+            padding-left: 25px;
+            color: #9aa6b9;
+        }
+
+        .tips li {
+            margin-bottom: 12px;
+        }
+
+        /* ETHICAL */
+
+        .ethical {
+            margin-top: 40px;
+
+            padding: 35px;
+
+            background: #0d1526;
+
+            border: 1px solid #203247;
+
+            border-radius: 15px;
+        }
+
+        .ethical h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+        }
+
+        .ethical p {
+            color: #949fb2;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 45px 10%;
+
+            text-align: center;
+
+            background: #0d1322;
+
+            border-top: 1px solid #202b40;
+        }
+
+        footer p {
+            color: #747f96;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .cia,
+            .threats {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">NEXORA</div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="cybersecurity.html">Cybersecurity</a>
+            </li>
+
+            <li>
+                <a href="technology.html">Technology</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="label">
+            NEXORA / CYBERSECURITY
+        </div>
+
+        <h1>
+            Protect The
+            <span>Digital World.</span>
+        </h1>
+
+        <p>
+            Memahami cybersecurity berarti memahami bagaimana cara
+            melindungi perangkat, jaringan, aplikasi, dan data dari
+            berbagai ancaman yang dapat terjadi di dunia digital.
+        </p>
+
+    </section>
+
+
+    <!-- PENGERTIAN -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Apa Itu Cybersecurity?</h2>
+
+            <p>
+                Pengertian dasar keamanan siber
+            </p>
+
+        </div>
+
+
+        <div class="definition">
+
+            <p>
+                Cybersecurity atau keamanan siber adalah praktik untuk
+                melindungi komputer, server, perangkat mobile, jaringan,
+                aplikasi, dan data dari serangan digital serta akses
+                yang tidak sah.
+            </p>
+
+            <br>
+
+            <p>
+                Cybersecurity tidak hanya berkaitan dengan teknologi,
+                tetapi juga manusia. Pengguna harus memahami bagaimana
+                menjaga password, mengenali penipuan digital, dan
+                menggunakan internet secara aman.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TUJUAN -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>CIA Triad</h2>
+
+            <p>
+                Tiga prinsip dasar dalam keamanan informasi
+            </p>
+
+        </div>
+
+
+        <div class="cia">
+
+            <div class="cia-card">
+
+                <h3>Confidentiality</h3>
+
+                <p>
+                    Confidentiality berarti informasi hanya dapat
+                    diakses oleh orang atau pihak yang memiliki
+                    izin. Contohnya adalah penggunaan password dan
+                    sistem autentikasi.
+                </p>
+
+            </div>
+
+
+            <div class="cia-card">
+
+                <h3>Integrity</h3>
+
+                <p>
+                    Integrity berarti data harus tetap akurat dan
+                    tidak diubah secara sembarangan oleh pihak
+                    yang tidak berwenang.
+                </p>
+
+            </div>
+
+
+            <div class="cia-card">
+
+                <h3>Availability</h3>
+
+                <p>
+                    Availability berarti sistem dan informasi harus
+                    tersedia ketika dibutuhkan oleh pengguna yang
+                    memiliki hak akses.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANCAMAN -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Common Cyber Threats</h2>
+
+            <p>
+                Beberapa ancaman yang sering ditemukan di dunia digital
+            </p>
+
+        </div>
+
+
+        <div class="threats">
+
+            <div class="threat">
+
+                <h3>🎣 Phishing</h3>
+
+                <p>
+                    Phishing adalah upaya menipu pengguna agar memberikan
+                    informasi seperti password atau data pribadi melalui
+                    pesan, website, atau email palsu.
+                </p>
+
+            </div>
+
+
+            <div class="threat">
+
+                <h3>🦠 Malware</h3>
+
+                <p>
+                    Malware merupakan perangkat lunak berbahaya yang
+                    dirancang untuk mengganggu sistem, mencuri informasi,
+                    atau melakukan aktivitas yang tidak diinginkan.
+                </p>
+
+            </div>
+
+
+            <div class="threat">
+
+                <h3>🔒 Ransomware</h3>
+
+                <p>
+                    Ransomware dapat mengenkripsi atau mengunci data korban
+                    dan kemudian meminta pembayaran sebagai syarat untuk
+                    mendapatkan akses kembali.
+                </p>
+
+            </div>
+
+
+            <div class="threat">
+
+                <h3>🌐 DDoS</h3>
+
+                <p>
+                    DDoS adalah serangan yang membanjiri layanan dengan
+                    banyak permintaan sehingga layanan dapat mengalami
+                    gangguan atau tidak tersedia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPS -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>How To Stay Safe?</h2>
+
+            <p>
+                Kebiasaan sederhana untuk meningkatkan keamanan digital
+            </p>
+
+        </div>
+
+
+        <div class="tips">
+
+            <ul>
+
+                <li>
+                    Gunakan password yang panjang dan berbeda untuk
+                    setiap akun penting.
+                </li>
+
+                <li>
+                    Aktifkan autentikasi dua faktor atau 2FA jika tersedia.
+                </li>
+
+                <li>
+                    Jangan sembarangan membuka link atau attachment
+                    dari sumber yang tidak dikenal.
+                </li>
+
+                <li>
+                    Selalu update sistem operasi dan aplikasi.
+                </li>
+
+                <li>
+                    Lakukan backup terhadap data penting secara berkala.
+                </li>
+
+                <li>
+                    Periksa alamat website sebelum memasukkan informasi
+                    sensitif.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="ethical">
+
+            <h3>Ethical Hacking</h3>
+
+            <p>
+                Ethical hacking adalah pengujian keamanan yang dilakukan
+                dengan izin pemilik sistem. Tujuannya adalah menemukan
+                kerentanan sehingga dapat diperbaiki sebelum dimanfaatkan
+                oleh pihak yang tidak bertanggung jawab.
+            </p>
+
+            <br>
+
+            <p>
+                Pengujian keamanan harus dilakukan berdasarkan izin,
+                ruang lingkup, dan aturan yang telah disepakati.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">NEXORA</div>
+
+        <p>
+            Cybersecurity Information Page
+        </p>
+
+        <p>
+            © 2026 NEXORA | Informatics Project
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Technology</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #080713;
+            color: white;
+            line-height: 1.7;
+        }
+
+        nav {
+            height: 75px;
+            padding: 0 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #111022;
+            border-bottom: 1px solid #292540;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #b56cff;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #dcd8eb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b56cff;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 10%;
+
+            background:
+                radial-gradient(circle at 80% 30%, #321052, transparent 30%),
+                #080713;
+        }
+
+        .label {
+            color: #b56cff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #b56cff;
+        }
+
+        .hero p {
+            max-width: 800px;
+            color: #a39fb5;
+            font-size: 18px;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #858096;
+        }
+
+        /* DEFINITION */
+
+        .definition {
+            padding: 35px;
+
+            background: #121020;
+
+            border-left: 4px solid #b56cff;
+
+            border-radius: 10px;
+        }
+
+        .definition p {
+            color: #9994aa;
+        }
+
+        /* TECHNOLOGY */
+
+        .technology-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .technology {
+            padding: 35px;
+
+            background: #121020;
+
+            border: 1px solid #292540;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .technology:hover {
+            transform: translateY(-8px);
+            border-color: #b56cff;
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .technology h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .technology p {
+            color: #9792a9;
+        }
+
+        /* BENEFITS */
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .benefit {
+            padding: 30px;
+
+            background: #121020;
+
+            border: 1px solid #292540;
+
+            border-radius: 15px;
+        }
+
+        .benefit h3 {
+            color: #b56cff;
+            margin-bottom: 12px;
+        }
+
+        .benefit p {
+            color: #918c9f;
+        }
+
+        /* CHALLENGE */
+
+        .challenge {
+            padding: 35px;
+
+            background: linear-gradient(
+                135deg,
+                #211035,
+                #121020
+            );
+
+            border: 1px solid #392a52;
+
+            border-radius: 15px;
+        }
+
+        .challenge h3 {
+            color: #b56cff;
+            margin-bottom: 15px;
+        }
+
+        .challenge p {
+            color: #9792a9;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 45px 10%;
+
+            text-align: center;
+
+            background: #111022;
+
+            border-top: 1px solid #292540;
+        }
+
+        footer p {
+            color: #777187;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .technology-grid,
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">NEXORA</div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="cybersecurity.html">Cybersecurity</a>
+            </li>
+
+            <li>
+                <a href="technology.html">Technology</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="label">
+            NEXORA / TECHNOLOGY
+        </div>
+
+        <h1>
+            Technology Shapes
+            <span>The Future.</span>
+        </h1>
+
+        <p>
+            Teknologi modern terus berkembang dan mengubah cara manusia
+            bekerja, belajar, berkomunikasi, dan menyelesaikan berbagai
+            masalah dalam kehidupan sehari-hari.
+        </p>
+
+    </section>
+
+
+    <!-- PENGERTIAN -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Apa Itu Teknologi Modern?</h2>
+
+            <p>
+                Mengenal perkembangan teknologi di era digital
+            </p>
+
+        </div>
+
+
+        <div class="definition">
+
+            <p>
+                Teknologi adalah penerapan ilmu pengetahuan dan berbagai
+                metode untuk menciptakan alat atau sistem yang dapat
+                membantu manusia menyelesaikan masalah.
+            </p>
+
+            <br>
+
+            <p>
+                Teknologi modern berkembang sangat cepat. Internet,
+                smartphone, kecerdasan buatan, cloud computing, dan
+                berbagai perangkat pintar telah menjadi bagian dari
+                kehidupan sehari-hari.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEKNOLOGI -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Modern Technology</h2>
+
+            <p>
+                Beberapa teknologi yang banyak digunakan dan dikembangkan
+                saat ini
+            </p>
+
+        </div>
+
+
+        <div class="technology-grid">
+
+            <div class="technology">
+
+                <div class="icon">🤖</div>
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Artificial Intelligence atau AI merupakan teknologi
+                    yang memungkinkan sistem komputer melakukan tugas
+                    seperti mengenali pola, memahami bahasa, dan membantu
+                    mengambil keputusan berdasarkan data.
+                </p>
+
+            </div>
+
+
+            <div class="technology">
+
+                <div class="icon">☁️</div>
+
+                <h3>Cloud Computing</h3>
+
+                <p>
+                    Cloud computing memungkinkan pengguna mengakses
+                    sumber daya komputasi, penyimpanan, dan berbagai
+                    layanan melalui jaringan internet tanpa harus
+                    menyediakan seluruh infrastrukturnya sendiri.
+                </p>
+
+            </div>
+
+
+            <div class="technology">
+
+                <div class="icon">🌐</div>
+
+                <h3>Internet of Things</h3>
+
+                <p>
+                    Internet of Things atau IoT adalah konsep ketika
+                    berbagai perangkat fisik terhubung ke internet
+                    sehingga dapat mengirim, menerima, dan bertukar data.
+                </p>
+
+            </div>
+
+
+            <div class="technology">
+
+                <div class="icon">⚙️</div>
+
+                <h3>Robotics</h3>
+
+                <p>
+                    Robotics merupakan bidang yang menggabungkan
+                    mekanik, elektronik, dan pemrograman untuk menciptakan
+                    robot yang dapat membantu manusia melakukan berbagai
+                    tugas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MANFAAT -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Manfaat Teknologi</h2>
+
+            <p>
+                Dampak positif teknologi dalam kehidupan
+            </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+            <div class="benefit">
+
+                <h3>Pendidikan</h3>
+
+                <p>
+                    Internet dan teknologi digital memberikan akses
+                    terhadap berbagai sumber pembelajaran dan informasi.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <h3>Kesehatan</h3>
+
+                <p>
+                    Teknologi membantu tenaga kesehatan dalam
+                    pengolahan informasi, komunikasi, dan berbagai
+                    proses pelayanan.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <h3>Bisnis</h3>
+
+                <p>
+                    Teknologi memungkinkan bisnis melakukan pemasaran,
+                    transaksi, komunikasi, dan pengelolaan data secara
+                    digital.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTOH -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Technology Around Us</h2>
+
+            <p>
+                Contoh teknologi yang sering kita gunakan
+            </p>
+
+        </div>
+
+
+        <div class="technology-grid">
+
+            <div class="technology">
+
+                <div class="icon">📱</div>
+
+                <h3>Smartphone</h3>
+
+                <p>
+                    Smartphone menggabungkan komunikasi, kamera,
+                    internet, aplikasi, navigasi, dan berbagai fungsi
+                    lainnya dalam satu perangkat.
+                </p>
+
+            </div>
+
+
+            <div class="technology">
+
+                <div class="icon">🏠</div>
+
+                <h3>Smart Home</h3>
+
+                <p>
+                    Perangkat smart home dapat terhubung ke jaringan
+                    sehingga pengguna dapat mengontrol perangkat tertentu
+                    menggunakan aplikasi atau sistem otomatisasi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHALLENGE -->
+
+    <section class="section">
+
+        <div class="challenge">
+
+            <h3>Technology & Responsibility</h3>
+
+            <p>
+                Perkembangan teknologi memberikan banyak manfaat,
+                tetapi juga membawa tantangan seperti privasi data,
+                keamanan informasi, ketergantungan terhadap teknologi,
+                dan penyebaran informasi yang salah.
+            </p>
+
+            <br>
+
+            <p>
+                Oleh karena itu, penggunaan teknologi perlu dilakukan
+                secara bijak, aman, dan bertanggung jawab.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">NEXORA</div>
+
+        <p>
+            Modern Technology Information Page
+        </p>
+
+        <p>
+            © 2026 NEXORA | Informatics Project
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
