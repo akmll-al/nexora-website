@@ -10,7 +10,30 @@
     <title>NEXORA | Technology</title>
 
     <style>
+:root {
+    --bg: #080713;
+    --surface: #121020;
+    --surface-2: #111022;
+    --text: #ffffff;
+    --text-muted: #a39fb5;
+    --text-soft: #9792a9;
+    --border: #292540;
+    --accent: #b56cff;
+    --accent-bg: #321052;
+}
 
+body.light-mode {
+    --bg: #f5f6fa;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --text: #171522;
+    --text-muted: #5e5a6b;
+    --text-soft: #666273;
+    --border: #ddd9e8;
+    --accent: #7b35d6;
+    --accent-bg: #eadcff;
+}
+        
         * {
             margin: 0;
             padding: 0;
@@ -18,11 +41,12 @@
             font-family: Arial, sans-serif;
         }
 
-        body {
-            background: #080713;
-            color: white;
-            line-height: 1.7;
-        }
+       body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
 
         nav {
             height: 75px;
@@ -32,8 +56,8 @@
             justify-content: space-between;
             align-items: center;
 
-            background: #111022;
-            border-bottom: 1px solid #292540;
+           background: var(--surface-2);   
+            border-bottom: 1px solid var(--border);
 
             position: sticky;
             top: 0;
@@ -140,36 +164,38 @@
         }
 
         .technology {
-            padding: 35px;
+    padding: 35px;
 
-            background: #121020;
+    background: var(--surface);
 
-            border: 1px solid #292540;
+    border: 1px solid var(--border);
 
-            border-radius: 15px;
+    border-radius: 15px;
 
-            transition: 0.3s;
-        }
+    transition: 
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.3s ease;
+}
 
-        .technology:hover {
-            transform: translateY(-8px);
-            border-color: #b56cff;
-        }
-
+.technology:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
         .icon {
             font-size: 45px;
             margin-bottom: 20px;
         }
 
         .technology h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
 
-        .technology p {
-            color: #9792a9;
-        }
-
+.technology p {
+    color: var(--text-soft);
+}
         /* BENEFITS */
 
         .benefits {
@@ -239,6 +265,37 @@
             margin-top: 8px;
         }
 
+/* THEME BUTTON */
+
+.theme-toggle {
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(181, 108, 255, 0.3);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+        
         @media (max-width: 800px) {
 
             nav ul {
@@ -265,27 +322,29 @@
 
     <!-- NAVBAR -->
 
-    <nav>
+  <nav>
+    <div class="logo">NEXORA</div>
 
-        <div class="logo">NEXORA</div>
+    <button id="themeToggle" class="theme-toggle">
+        ☀️ Light
+    </button>
 
-        <ul>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
 
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+        <li>
+            <a href="cybersecurity.html">Cybersecurity</a>
+        </li>
 
-            <li>
-                <a href="cybersecurity.html">Cybersecurity</a>
-            </li>
+        <li>
+            <a href="technology.html">Technology</a>
+        </li>
 
-            <li>
-                <a href="technology.html">Technology</a>
-            </li>
+    </ul>
 
-        </ul>
-
-    </nav>
+ </nav>
 
 
     <!-- HERO -->
@@ -585,6 +644,45 @@
 
     </footer>
 
+    <script>
+    const themeToggle = document.getElementById("themeToggle");
+
+    // Cek tema yang tersimpan
+    const savedTheme = localStorage.getItem("nexora-theme");
+
+    if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+        themeToggle.textContent = "🌙 Dark";
+    }
+
+    // Tombol toggle
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle("light-mode");
+
+        // Jika Light Mode
+        if (document.body.classList.contains("light-mode")) {
+
+            themeToggle.textContent = "🌙 Dark";
+
+            localStorage.setItem(
+                "nexora-theme",
+                "light"
+            );
+
+        } else {
+
+            // Jika Dark Mode
+            themeToggle.textContent = "☀️ Light";
+
+            localStorage.setItem(
+                "nexora-theme",
+                "dark"
+            );
+        }
+    });
+</script>
+    
 </body>
 
 </html>
